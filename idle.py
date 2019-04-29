@@ -1,7 +1,7 @@
 import sys;
 
 
-import Tk as Tk
+import Tkinter as Tk
 
 
 from PIL import Image, ImageTk

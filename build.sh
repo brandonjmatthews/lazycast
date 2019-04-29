@@ -1,4 +1,6 @@
-cd /opt/vc/src/hello_pi/hello_video
+cd ./player
 make
-cd /opt/vc/src/hello_pi/libs/ilclient/
+cd ../h264
+make
+cd ../control
 make
