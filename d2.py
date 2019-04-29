@@ -36,6 +36,10 @@ enable_mouse_keyboard = 1
 
 ####################################################
 
+import idle
+pin = sys.argv[1]
+idle.show_pin(pin)
+
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_address = ('192.168.173.80', 7236)
 sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
@@ -187,6 +191,7 @@ def launchplayer(player_select):
 	os.system('pkill vlc')
 	os.system('pkill player.bin')
 	os.system('pkill h264.bin')
+	idle.kill()
 	if player_select == 0:
 		os.system('vlc --fullscreen rtp://0.0.0.0:1028/wfd1.0/streamid=0 &')
 	elif player_select == 1:

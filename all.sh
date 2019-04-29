@@ -64,7 +64,8 @@ echo "The display is ready"
 while :
 do
 	echo "PIN:"	
-	sudo wpa_cli -i$p2pinterface wps_pin any
+	pin=sudo wpa_cli -i$p2pinterface wps_pin any
+	echo pin
 	echo ""
-	./d2.py
+	./d2.py pin
 done
